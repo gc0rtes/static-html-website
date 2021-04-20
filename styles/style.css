@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*
+* {border: 1px solid red;} 
+
+/**/
+html{
+	height: 100% /*Added to make background linear-gradient no 
+					repeat on the <body>. Ref.: https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats*/
+}
+
+body {
+		/*
+	background: rgb(30,32,34);
+	background: linear-gradient(210deg, rgba(30,32,34,1) 50%, rgba(230,230,230,1) 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed; */
+	background-color: black;
+}
+
+.div-header {
+	min-width: 932px;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 2px solid #F7559A;
+}
+
+.div-logo {
+	display: inline-flex;
+	margin-top: 35px;
+	height: 75px;
+}
+
+.logo-img{
+	width: 100px;
+	height: 75px;
+	
+}
+
+.div-webdev-pink {
+	text-align: left;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.guilherme-logo {
+	font-family: 'Monoton', cursive;	
+	font-size: 2em;
+	color: #ffffff;
+
+}
+
+.cortes-logo {	
+	margin-left: 15px;
+	margin-top: 10px;
+	font-family: 'Monoton', cursive;
+	font-size: 2em;
+	color: #ffffff;
+}
+
+.webdev-logo {
+	color: #f986b7;
+	font-size: 0.75em;
+}
+
+/* Format <nav> and anchors inside nav-bar div
+--------------------------------*/
+nav {
+	margin-top: 32px;
+	
+}
+
+nav a{
+
+	display: inline-block;
+	padding: 15px 0;
+	margin: 0 15px;
+	text-decoration: none;
+	color: #e6e6e6;
+	font-size: 1em;	
+
+
+}
+
+nav a:hover {
+	
+	color: white;
+	border-bottom: solid 2px #F7559A;
+}
+
+#color-palete{
+	width: 100px;
+	padding: 5px;
+}
+.padding {
+	padding: 5px;
+	border: none;
+}
+
+/* Format <main> and post div
+--------------------------------*/
+
+main {
+	width: 800px;
+	min-width: 800px;
+	margin: 10px auto;
+	display: flex;
+}
+
+.postagem {
+	background-color: #e6e6e6;
+	margin: 20px 0;
+	width: 500px;
+	/*border: 2px solid #F7559A;*/
+	
+}
+
+.postagem h1 {
+	border-bottom: 1px solid #F7559A;
+	background-color: #1e2022;
+	color: #f986b7;
+}
+
+/* Format <aside> related content
+--------------------------------*/
+
+.related-content {
+	width: 274px;
+	background-color: #e6e6e6;
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+
+/* Formatting hashtags# -- Viewport units ("vh" e "vw")
+--------------------------------*/
+
+.size-0 {font-size: 10vw;}
+.size-1 {font-size: 6vw; color: #f5247d}
+.size-2 {font-size: 4vw; color: rebeccapurple;}
+.wrapper{}
+
+
+/* Pallete colors
+--------------------------------*/
+#F7559A { background-color: #F7559A }
+#ffffff { background-color: #ffffff }
+#a1e2022 { background-color: #1e2022 }
+#f986b7 { background-color: #f986b7 }
+#f5247d { background-color: #f5247d }
+#e6e6e6 { background-color: #e6e6e6 }
