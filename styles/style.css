@@ -17,7 +17,7 @@ body {
 	background: linear-gradient(210deg, rgba(30,32,34,1) 50%, rgba(230,230,230,1) 100%);
 	background-repeat: no-repeat;
 	background-attachment: fixed; */
-	background-color: black;
+	background-color: whitesmoke);
 }
 
 .div-header {
@@ -26,6 +26,7 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	border-bottom: 2px solid #F7559A;
+	background-color: black;
 }
 
 .div-logo {
@@ -112,7 +113,7 @@ main {
 .postagem {
 	background-color: #e6e6e6;
 	margin: 20px 0;
-	width: 500px;
+	width: 800px;
 	/*border: 2px solid #F7559A;*/
 	
 }
