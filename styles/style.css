@@ -40,6 +40,13 @@ body {
 	height: 75px;
 	
 }
+#perfil {
+	width: 307px;
+	height: 330px;
+	float: left;
+	border-radius: 150px;
+	margin: 15px;
+}
 
 .div-webdev-pink {
 	text-align: left;
