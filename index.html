@@ -11,20 +11,21 @@
 </head>
 <body>
     <header>
-        <div class="div-header">
+        <div class="div-header" id="top">
             <div class="div-logo">
                 <img src="images/logo.png" class="logo-img">
                 <div class="div-webdev-pink">
-                <span class="guilherme-logo">GUILHERME</span>
-                <p class="webdev-logo">WEBDEVELOPER</p>
+                    <span class="guilherme-logo">GUILHERME</span>
+                    <p class="webdev-logo">WEBDEVELOPER</p>
                 </div>
                 <span class="cortes-logo">CORTES</span>			
             </div>	
             <nav>		
-                <a href="#">HOME</a>
-                <a href="#">VALUES</a>
-                <a href="#">ABOUT</a>
-                <a href="#">CONTACT</a>		
+                <a href="#about">ABOUT</a>
+                <a href="#food">YUMMY</a>
+                <a href="#values">VALUES</a>
+                <a href="#game">GAME</a>
+                <a href="#contact">CONTACT</a>		
             </nav>
         </div>
     
@@ -32,38 +33,57 @@
     
     <main>
         <div class="block-post">
-            <div class="postagem">
-                <h1>Home</h1>
-                <img src="images/perfil-coda.jpeg" alt="" id="perfil">
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-    
-                <p>Yet even with all of his advantages, he believes his career has been impacted by a subtle bias: one against men who shun macho stereotypes, even in a field largely made up of women. His work style is gentle; he believes the adage about catching more flies with honey. And although he’s never been formally reprimanded or punished for his way of working, he believes that it’s meant he’s climbed the ladder more slowly than more traditionally masculine colleagues. </p>
+            <div class="postagem" id="about">
+                <h1>About</h1>
+                <img src="images/perfil-coda.jpeg" alt="" class="wrapper" id="perfil">
+                <p>Hello guys! My name is Guilherme I come from Brazil and I've arrived 
+                    in The Netherlands in March last year.</p>
+                <p>I have a work background with environmental consultancy but it's been 
+                    a while I am looking for a career change to IT field.</p>
+                
             </div>
-            <div class="postagem">
-                <h1>Values - Tag Cloud</h1>
+            <div class="postagem" id="values">
+                <h1>Values - Tag Cloud</h1><a href="#top" class="back">back to top</a>
                     <div class="wrapper">
                         <span class="size-0">#RESPECT</span>
-                        <p class="size-1"><em>#LOVE</em></p>
+                        <p class="size-1"><em>#HAVE FUN</em></p>
                         <span class="size-0">#POSITIVE</Span>
-                        <span class="size-1">#CREATIVITY</span>
                         <span class="size-2"><em>#ATTITUDE</em></span>
+                        <span class="size-1">#CREATIVITY</span>
                     </div>	
             </div>
-            <div class="postagem">
-                <h1>About</h1>
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-    
-                <p>Yet even with all of his advantages, he believes his career has been impacted by a subtle bias: one against men who shun macho stereotypes, even in a field largely made up of women. His work style is gentle; he believes the adage about catching more flies with honey. And although he’s never been formally reprimanded or punished for his way of working, he believes that it’s meant he’s climbed the ladder more slowly than more traditionally masculine colleagues. </p>
+            <div class="postagem" id="food">
+                <h1>Yummy Food Image Gallery</h1><a href="#top" class="back">back to top</a>
+                <p> An imagem gallery made with javaScript showing the dishes I've discovered in 
+                    The Netherlands</p>
+                <iframe id="inlineFrame"
+                title="Inline Frame Example"
+                width="650"
+                height="600"
+                src="/home/guilherme/Desktop/web-developer/mozilla/javaScript/image-gallery/gallery-start/index.html">
+                </iframe>
             </div>
-            <div class="postagem">
-                <h1>Contact</h1>
-                <p>David Wyatt has worked in public relations for more than 20 years, having worked his way up to become a senior vice-president at an Austin, Texas-based firm. He recognises his privileges as a straight white man whose education was paid for.</p>  
-    
-                <p>Yet even with all of his advantages, he believes his career has been impacted by a subtle bias: one against men who shun macho stereotypes, even in a field largely made up of women. His work style is gentle; he believes the adage about catching more flies with honey. And although he’s never been formally reprimanded or punished for his way of working, he believes that it’s meant he’s climbed the ladder more slowly than more traditionally masculine colleagues. </p>
+
+            <div class="postagem" id="game">
+                <h1>Jan Ken Po Game</h1><a href="#top" class="back">back to top</a>
+                <p> Jan Ken Po or Rock Scissors Paper Game made with javaScript</p>
+                <iframe id="inlineFrame"
+                title="Inline Frame Example"
+                width="650"
+                height="850"
+                src="/home/guilherme/Desktop/web-developer/mozilla/javaScript/jokenpo/jokenpo-v3.html">
+                </iframe>
             </div>
+
+            <div class="postagem" id="contact">
+                <h1>Contact</h1> <a href="#top" class="back">back to top</a>
+                <ul>
+                    <li>LinkedIn</li>
+                    <li>GitHub</li>
+                    <li>Facebook</li>
+                    <li>E-mail</li>
+                </ul>
+                </div>
         </div>	
         
     </main>
