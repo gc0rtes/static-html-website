@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jan Ken Po Game</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+		/* * {border: 1px solid red;} 
+
+		/**/
+
+		.button {
+			width: 100px;
+			height: 100px;
+		}
+		.display{
+			width: 465px;
+			margin: 50px auto;
+			text-align: center;
+		}
+		.--border {
+			border: 1px dotted blue;
+		}
+		.--flex {
+			display: flex;
+		}
+
+		.--grow {
+			flex: 1;
+		}
+
+		.--fontRed {
+			color: red;
+			font-size: 1.75em;
+		}
+
+		.--fontBlue {
+			color: blue;
+			font-size: 1.75em;
+		}
+		.--fontWhite {
+			color: white;
+			font-size: 1.75em;
+		}
+
+		.vs {
+			padding: 120px 0;
+			font-size: 1.75em;
+		}
+		.--paddingLateral {
+			padding: 0 15px;
+		}
+
+		.--paddingTopBott{
+			padding: 10px 0;
+		}
+
+
+		#newGame {
+			padding: 5px;
+			margin: 10px 0;
+		}
+
+		/* Remove outline focus from pressed buttons*/
+
+		input:focus {
+			outline: none;
+		}
+
+		
+		/*Add a mirror effect on the cpu img choice*/
+
+		#imgCpuChoice {
+			-webkit-transform: scaleX(-1);
+  			transform: scaleX(-1);
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="display --border">
+		<h1>Jan Ken Po !</h1>
+		<h2 class="--fontRed">***SCORE***</h2>
+
+		<div class="score --flex">	
+
+			<div class="--grow">
+				<p>YOU</p>
+				<p class="userScore --fontBlue">0</p>
+				<p class="userChoice">Your Choice: </p>
+				<img src="images/blank.png" class="button" id="imgUserChoice">
+			</div>
+
+			<div class="vs --grow">
+				VS
+			</div>
+
+			<div class="--grow">
+				<p>CPU</p>
+				<p class="cpuScore --fontRed">0</p>
+				<p class="cpuChoice">CPU Choice: </p>	
+				<img src="images/blank.png" class="button" id="imgCpuChoice">			
+			</div>
+
+		</div>
+
+		<div>
+			<p class="result --fontWhite --paddingTopBott">-</p>
+		</div>
+
+		<div class="menu">
+			<h2>What's your move?</h2>
+			<div>
+				<input type="image" class="button --paddingLateral" id="rock" value="Rock" alt="Rock"
+				src="images/rock.svg">
+				<input type="image" class="button --paddingLateral" id="paper" value="Paper" alt="Paper"
+				src="images/paper.svg">
+				<input type="image" class="button --paddingLateral" id="scissors" value="Scissors" alt="Scissors"
+				src="images/scissors.svg">
+			</div>		
+		</div>
+		<div>
+			<input type="button" value="New Game" id="newGame">
+		</div>
+	</div>
+
+<script type="text/javascript">
+	
+	//^^ Declare let variables 
+
+	let cpuScoreCounter = userScoreCounter = countGame = 0;	
+	let userChoice="";
+
+	//^^ Declare const variables to print results on screen
+	
+	const userScore = document.querySelector('.userScore');
+	const cpuScore = document.querySelector('.cpuScore');
+	const result = document.querySelector('.result');
+
+	//^^ Declare const variables to call functions from buttons:
+
+	const rockButton = document.querySelector('#rock');
+	const paperButton = document.querySelector('#paper');
+	const scissorsButton = document.querySelector('#scissors');
+
+	//^^ Declare const variables to show the img selected:
+
+	const imgUserChoice = document.querySelector('#imgUserChoice');
+	const imgCpuChoice = document.querySelector('#imgCpuChoice');
+
+	//^^ Declare the functions:	
+
+	function JanKenPo() {
+
+		//^^ Generate a random namber between 1-3 inclusive
+		//^^ Convention: Rock(1); Paper(2); Scissors(3) 
+
+		let cpu = Math.floor(Math.random() * (3)) + 1;
+
+		if (// draw conditions	
+			(cpu == 1 && userChoice == "rock") ||	
+			(cpu == 2 && userChoice == "paper") ||	
+			(cpu == 3 && userChoice == "scissors")){
+			result.textContent = "DRAW";
+			result.style.backgroundColor = 'grey';		
+		} else if (// lose conditions
+			(cpu == 2 && userChoice == "rock") || 
+			(cpu == 3 && userChoice == "paper") || 
+			(cpu == 1 && userChoice == "scissors")){
+			result.textContent = "You LOSE";
+			result.style.backgroundColor = 'red';			
+			cpuScoreCounter++;
+			cpuScore.textContent = cpuScoreCounter;
+		} else if (//win conditions
+			(cpu == 3 && userChoice == "rock") || 
+			(cpu == 1 && userChoice == "paper") || 
+			(cpu == 2 && userChoice == "scissors")){			
+			result.textContent = "You WIN";
+			result.style.backgroundColor = 'green';			
+			userScoreCounter++;
+			userScore.textContent = userScoreCounter;
+		}
+
+		//^^ select the rigth img to show
+
+		if (cpu==1) {
+			imgCpuChoice.setAttribute('src', 'images/rock.svg');
+		}else if (cpu==2) {
+			imgCpuChoice.setAttribute('src', 'images/paper.svg');
+		} else if (cpu==3) {
+			imgCpuChoice.setAttribute('src', 'images/scissors.svg');
+		}
+
+	}
+
+	function JanKenPoRock () {
+		
+		userChoice = "rock";		
+		imgUserChoice.setAttribute('src', 'images/rock.svg');
+		JanKenPo();
+	}
+
+	function JanKenPoPaper () {
+		
+		userChoice = "paper";
+		imgUserChoice.setAttribute('src', 'images/paper.svg');
+		JanKenPo();		
+	}
+
+	function JanKenPoScissors () {
+		
+		userChoice = "scissors";		
+		imgUserChoice.setAttribute('src', 'images/scissors.svg');
+		JanKenPo();		
+	}
+
+	function startNewGame () {
+		imgUserChoice.setAttribute('src', 'images/blank.png');
+		imgCpuChoice.setAttribute('src', 'images/blank.png');
+		result.textContent = "-";
+		result.style.backgroundColor = 'white';
+		userScoreCounter = cpuScoreCounter = 0;
+		userScore.textContent = userScoreCounter;
+		cpuScore.textContent = cpuScoreCounter;
+
+	}
+
+
+	/*^^ Declare events */
+
+	rockButton.addEventListener('click', JanKenPoRock);
+	paperButton.addEventListener('click', JanKenPoPaper);
+	scissorsButton.addEventListener('click', JanKenPoScissors);
+	newGame.addEventListener('click', startNewGame)
+
+</script>
+</body>
+</html>
